@@ -41,12 +41,11 @@
         android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.example.xyzreader.ui.MaxWidthLinearLayout
+        <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:maxWidth="@dimen/detail_card_max_width"
             android:background="#fff"
             android:elevation="2dp" >
 
@@ -96,7 +95,7 @@
                 android:textSize="@dimen/detail_body_text_size"
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
 
-        </com.example.xyzreader.ui.MaxWidthLinearLayout>
+        </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
