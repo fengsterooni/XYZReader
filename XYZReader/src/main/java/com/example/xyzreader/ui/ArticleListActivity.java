@@ -45,14 +45,6 @@ public class ArticleListActivity extends ActionBarActivity implements
         setContentView(R.layout.activity_article_list);
         ButterKnife.bind(this);
 
-        // mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
-
-        final View toolbarContainerView = findViewById(R.id.toolbar_container);
-
-        // mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
-
-        // mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         getLoaderManager().initLoader(0, null, this);
 
         if (savedInstanceState == null) {
@@ -172,9 +164,6 @@ public class ArticleListActivity extends ActionBarActivity implements
         public ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
-            // thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
-            // titleView = (TextView) view.findViewById(R.id.article_title);
-            // subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
         }
     }
 }
