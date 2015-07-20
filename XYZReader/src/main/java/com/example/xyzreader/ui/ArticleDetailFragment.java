@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.VolleyError;
@@ -50,6 +52,10 @@ public class ArticleDetailFragment extends Fragment implements
     Toolbar toolbar;
     @Bind(R.id.photo)
     ImageView mPhotoView;
+    @Nullable @Bind(R.id.collapsingToolbarLayout)
+    CollapsingToolbarLayout collapsingToolbarLayout;
+    @Bind(R.id.pbSpinner)
+    ProgressBar spinner;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -143,6 +149,7 @@ public class ArticleDetailFragment extends Fragment implements
                         public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {
                             Bitmap bitmap = imageContainer.getBitmap();
                             if (bitmap != null) {
+                                spinner.setVisibility(View.GONE);
                                 Palette p = Palette.generate(bitmap, 12);
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());

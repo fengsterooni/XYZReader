@@ -49,6 +49,7 @@ public class ArticleListActivity extends ActionBarActivity implements
 
         if (savedInstanceState == null) {
             refresh();
+            mSwipeRefreshLayout.setEnabled(false);
         }
     }
 
@@ -92,6 +93,7 @@ public class ArticleListActivity extends ActionBarActivity implements
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
+        mSwipeRefreshLayout.setRefreshing(false);
         Adapter adapter = new Adapter(cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
