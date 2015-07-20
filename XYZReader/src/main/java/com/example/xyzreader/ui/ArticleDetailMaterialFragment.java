@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -46,7 +47,7 @@ public class ArticleDetailMaterialFragment extends Fragment implements
     View mRootView;
     private int mMutedColor = 0xFF333333;
 
-    @Bind(R.id.toolbar)
+    @Nullable @Bind(R.id.toolbar)
     Toolbar toolbar;
     @Bind(R.id.photo)
     ImageView mPhotoView;
@@ -97,8 +98,6 @@ public class ArticleDetailMaterialFragment extends Fragment implements
                              Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail_material, container, false);
         ButterKnife.bind(this, mRootView);
-
-        toolbar.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
             @Override
