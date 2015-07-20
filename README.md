@@ -1,4 +1,4 @@
-Make Your App Material Project
+XYZReader Project
 =============
 
 This is an Android application of XYZReader.
@@ -25,5 +25,5 @@ Color theme does not impact usability of the app.
 
 ###**_Screencast:_**
 
-![screenshot](https://github.com/fengsterooni/spotify/blob/master/xyzreader.gif)
+![screenshot](https://github.com/fengsterooni/XYZReader/blob/master/xyzreader.gif)
 
