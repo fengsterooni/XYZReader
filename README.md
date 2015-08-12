@@ -1,12 +1,16 @@
-XYZReader Project
+XYZReader
 =============
 
-This is an Android application of XYZReader.
+This project, **XYZReader**, is for [Udacity](www.udacity.com) [**"Android Developer Nanodegree"** program](https://www.udacity.com/course/android-developer-nanodegree--nd801).
 
-The project is for Udacity **"Android Developer Nanodegree"** program.
+### **_Introduction:_**
 
+This project needs to improve the UI an UX for
+* XYZ Reader: A mock RSS feed reader about all things bacon.
 
-###**_Completed user stories:_**
+using Google's [***Material Design***](http://www.google.com/design/spec/material-design/introduction.html).
+
+### **_Completed user stories:_**
 
 #### Required:
 
@@ -23,7 +27,6 @@ Color theme does not impact usability of the app.
 * 	App uses fonts that are either the Android defaults, are complementary, and aren't otherwise distracting.
 * 	App conforms to common standards found in the Android Nanodegree General Project Guidelines
 
-###**_Screencast:_**
+### **_Screencast:_**
 
 ![screenshot](https://github.com/fengsterooni/XYZReader/blob/master/xyzreader.gif)
-
